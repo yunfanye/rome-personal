@@ -2327,6 +2327,71 @@ describe("Webchat API", () => {
     });
   });
 
+  it("passes saved image uploads to native model input without treating documents as images", async () => {
+    let input: AgentTurnInput | undefined;
+    deps.agentSessionManager = {
+      acquire: rs.fn(
+        async () =>
+          ({
+            key: { agentName: "main", channelThreadKey: "webchat:test" },
+            sessionId: "image-session",
+            status: "idle",
+            sendTurn(value: AgentTurnInput) {
+              input = value;
+              return {
+                turnId: "image-turn",
+                turnContext: otelContext.active(),
+                events: (async function* () {
+                  yield { type: "result" as const, content: "Seen" };
+                })(),
+              };
+            },
+            subscribe: () => () => {},
+            onStatusChange: () => () => {},
+            interrupt: async () => {},
+            close: async () => {},
+          }) satisfies AgentSession,
+      ),
+      peek: () => undefined,
+      shutdown: async () => {},
+    };
+    const app = createWebchatRuntime(deps).routes;
+    const session = (await (
+      await app.request("/chat/sessions", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: "Images" }),
+      })
+    ).json()) as { id: string };
+    const response = await app.request(`/chat/sessions/${session.id}/turns`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        text: "Inspect the evidence",
+        files: [
+          {
+            name: "evidence.png",
+            mimeType: "image/png",
+            dataBase64: Buffer.from("image bytes").toString("base64"),
+          },
+          {
+            name: "notes.txt",
+            mimeType: "text/plain",
+            dataBase64: Buffer.from("notes").toString("base64"),
+          },
+        ],
+      }),
+    });
+    expect(response.status).toBe(200);
+    expect(input?.images).toHaveLength(1);
+    expect(input?.images?.[0]).toContain(projectsRoot);
+    expect(input?.images?.[0]).toMatch(/evidence\.png$/);
+    expect(existsSync(input!.images![0])).toBe(true);
+    expect(input?.prompt).toContain("notes.txt");
+    const receipt = (await response.json()) as { turnId: string };
+    await (await app.request(`/chat/turns/${receipt.turnId}/stream`)).text();
+  });
+
   it("expands a slash-skill command for the model but persists the raw text", async () => {
     let sentTurn: AgentTurnInput | undefined;
     deps.agentSessionManager = {

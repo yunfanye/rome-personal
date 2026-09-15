@@ -59,6 +59,7 @@
     "db:migrate": "pnpm --filter @rome/core db:migrate",
     "db:studio": "pnpm --filter @rome/core db:studio",
     "seed:sessions-explorer": "pnpm --filter @rome/core seed:sessions-explorer",
+    "eval:mind2web": "pnpm --filter @rome/core eval:mind2web",
     "app:install": "pnpm --filter @rome/core app:install",
     "app:uninstall": "pnpm --filter @rome/core app:uninstall",
     "app:list:required": "pnpm --filter @rome/core app:list:required",

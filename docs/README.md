@@ -14,6 +14,8 @@ Durable design documentation for Rome. For the rules used when writing docs, see
 
 Other top-level files in `docs/` are operational references paired with the surface they document — [`design-system.md`](design-system.md), [`ui-kit.md`](ui-kit.md), [`dashboard-mock-mode.md`](dashboard-mock-mode.md), [`releases.md`](releases.md), [`observability/`](observability/). Rome Cloud deployment operations live in the private [`amantru/rome-cloud`](https://github.com/amantru/rome-cloud) repository.
 
+[`online-mind2web.md`](online-mind2web.md) covers browser benchmark execution through Rome and scoring with WebJudge.
+
 ## Why docs
 
 In AI-coding workflows the bottleneck is the cost of communication, not the cost of producing code. The context code derives from — why Rome exists, what the system promises, what each term means — has to live in the repo, where AI reads it. Docs capture that context durably.

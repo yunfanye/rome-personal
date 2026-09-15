@@ -1,0 +1,8 @@
+[
+  {
+    "task_id": "rome_smoke_example",
+    "confirmed_task": "Read the heading and introductory paragraph on this page. Return the heading and explain what the domain is for.",
+    "website": "https://example.com",
+    "reference_length": 1
+  }
+]

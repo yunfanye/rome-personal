@@ -3656,7 +3656,15 @@ export function createWebchatRuntime(deps: ApiDeps): { routes: Hono; runtime: We
         if (stream) emitToStream(stream, "input_status", status, `input:${status.inputId}`);
       },
     };
-    const input = { inputId, prompt: promptText, reasoningEffort };
+    const images = savedUploads
+      .filter((file) => /^image\/(png|jpeg|webp|gif)$/.test(file.mimeType ?? ""))
+      .map((file) => file.path);
+    const input = {
+      inputId,
+      prompt: promptText,
+      reasoningEffort,
+      ...(images.length ? { images } : {}),
+    };
     let receipt;
     if (agentSess.submitInput) {
       receipt = agentSess.submitInput(input, options);
