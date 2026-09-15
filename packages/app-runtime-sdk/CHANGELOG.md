@@ -1,5 +1,18 @@
 # @rome-os/app-runtime
 
+## [0.6.6](https://github.com/yunfanye/rome-personal/compare/app-runtime-v0.6.5...app-runtime-v0.6.6) (2026-09-15)
+
+
+### Features
+
+* add app keys for guardian-entered app credentials ([#91](https://github.com/yunfanye/rome-personal/issues/91)) ([3576f96](https://github.com/yunfanye/rome-personal/commit/3576f9689b04279bb938647c07be1c093d7267be))
+* add Store Remix entry without installing source apps ([#90](https://github.com/yunfanye/rome-personal/issues/90)) ([bddf60f](https://github.com/yunfanye/rome-personal/commit/bddf60f9f5d523fea6c4e75cf144c0cc0071f365))
+* add streaming input to WebChat ([#121](https://github.com/yunfanye/rome-personal/issues/121)) ([f99eb96](https://github.com/yunfanye/rome-personal/commit/f99eb96cf28d1e6ba82be0c8b959f4947dd63ffb))
+* **chat:** add a universal stop command ([#168](https://github.com/yunfanye/rome-personal/issues/168)) ([6c33dad](https://github.com/yunfanye/rome-personal/commit/6c33dad63f60e6f33ff2d9c5819f2390cf035eff))
+* **core:** use provider-native output schemas ([#164](https://github.com/yunfanye/rome-personal/issues/164)) ([9da1e18](https://github.com/yunfanye/rome-personal/commit/9da1e1840fcee42b95fa9e5cd439731b51f11c60))
+* **onboarding:** collapse cloud setup into the welcome conversation ([#222](https://github.com/yunfanye/rome-personal/issues/222)) ([00c96f7](https://github.com/yunfanye/rome-personal/commit/00c96f714d753ebe9cfb079d888d72daf04b8da5))
+* **people:** send a message to a person ([#208](https://github.com/yunfanye/rome-personal/issues/208)) ([2ecc85e](https://github.com/yunfanye/rome-personal/commit/2ecc85efb7bce8e7b23a8148c3241168511c139b))
+
 ## [0.6.5](https://github.com/rome-os/rome/compare/app-runtime-v0.6.4...app-runtime-v0.6.5) (2026-09-15)
 
 

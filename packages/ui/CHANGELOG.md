@@ -1,5 +1,32 @@
 # Changelog
 
+## [0.4.0](https://github.com/yunfanye/rome-personal/compare/ui-v0.3.0...ui-v0.4.0) (2026-09-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* **ui:** replace the Body type role with Composer ([#389](https://github.com/yunfanye/rome-personal/issues/389))
+
+### Features
+
+* **people:** make All the placed roster and cut the page's descriptions ([#203](https://github.com/yunfanye/rome-personal/issues/203)) ([89eff72](https://github.com/yunfanye/rome-personal/commit/89eff72cadd1c6ca28a740ab955b0c0d55dabf79))
+* **ui:** add a Timestamp component ([#218](https://github.com/yunfanye/rome-personal/issues/218)) ([c0dd606](https://github.com/yunfanye/rome-personal/commit/c0dd6062c90af157d908bfd8fd8cd06c59d9e7b5))
+* **ui:** add row, checkbox, and radio group primitives ([#367](https://github.com/yunfanye/rome-personal/issues/367)) ([848376a](https://github.com/yunfanye/rome-personal/commit/848376a9eebceb81341b25a323ea345c936ed200))
+* **ui:** add the page layout tier with List, and migrate two pages onto it ([#392](https://github.com/yunfanye/rome-personal/issues/392)) ([be1b7a3](https://github.com/yunfanye/rome-personal/commit/be1b7a368f204e66ac0db928e1733836d283b4a3))
+* **ui:** replace the Body type role with Composer ([#389](https://github.com/yunfanye/rome-personal/issues/389)) ([5ade8d5](https://github.com/yunfanye/rome-personal/commit/5ade8d51409d450eeb7c5e4cedbc87f285e81d05))
+* **ui:** retune type weight, control scale, and focus edge ([#365](https://github.com/yunfanye/rome-personal/issues/365)) ([d28d695](https://github.com/yunfanye/rome-personal/commit/d28d695aa3ad58cd49ebcd44011da453502815a4))
+* **web:** make chat code blocks and Mermaid diagrams collapsible ([#277](https://github.com/yunfanye/rome-personal/issues/277)) ([66178d4](https://github.com/yunfanye/rome-personal/commit/66178d4e2d0baa78b336c1161ca0c76cdeef4618))
+
+
+### Bug Fixes
+
+* **ui:** drop the clipped focus edge on the Command input row ([#235](https://github.com/yunfanye/rome-personal/issues/235)) ([781dac3](https://github.com/yunfanye/rome-personal/commit/781dac3d69b1db1dc03898c47822bec85718f8b3))
+* **ui:** give ghost and outline buttons a resting text color ([#103](https://github.com/yunfanye/rome-personal/issues/103)) ([786f9cb](https://github.com/yunfanye/rome-personal/commit/786f9cbe77a9bea3e859a2c6a1aca982c4481a8a))
+* **ui:** keep the inline code tint inside its prose line ([#84](https://github.com/yunfanye/rome-personal/issues/84)) ([a5ce6a7](https://github.com/yunfanye/rome-personal/commit/a5ce6a70e74ee19a5ecf90e177db01021d7c8bbd))
+* **ui:** key SegmentedControl selection on aria-checked ([#264](https://github.com/yunfanye/rome-personal/issues/264)) ([#265](https://github.com/yunfanye/rome-personal/issues/265)) ([b66d473](https://github.com/yunfanye/rome-personal/commit/b66d473cce6b47383acb5d0ad50b24ad1f0ba4b5))
+* **ui:** read the UI role on a small Input ([#233](https://github.com/yunfanye/rome-personal/issues/233)) ([eecdb6e](https://github.com/yunfanye/rome-personal/commit/eecdb6e8b8221abba14425400ba5796d0fbafb59))
+* **ui:** size Markdown inline code to clear the compact line box ([#391](https://github.com/yunfanye/rome-personal/issues/391)) ([2c64d74](https://github.com/yunfanye/rome-personal/commit/2c64d7422dc7ba28e99bdd6056954010cdbdf0a5))
+
 ## [0.3.0](https://github.com/rome-os/rome/compare/ui-v0.2.8...ui-v0.3.0) (2026-09-15)
 
 
